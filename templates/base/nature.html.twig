@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Album Être Vivant</title>
+	
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+	<style>
+		#myModal {
+			display: none;
+			position: fixed;
+			z-index: 1;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.8);
+			overflow: auto;
+			text-align: center;
+		}
+
+		#myModal img {
+			max-width: 80%;
+			max-height: 80%;
+			margin-top: 5%;
+		}
+
+		.close {
+			position: absolute;
+			top: 15px;
+			right: 25px;
+			color: #fff;
+			font-size: 30px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		.close:hover,
+		.close:focus {
+			color: #bbb;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.col-md-4 {
+			padding: 10px;
+		}
+
+		.gallery-image {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			border-radius: 10px;
+			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.gallery-image:hover {
+			transform: scale(1.05);  
+			box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);  
+		}
+
+		.gallery-image:active {
+			transform: scale(1.1);  
+		}
+	</style>
+</head>
+<body>
+
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="#">David Penez</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="{{ path('app_base') }}">Accueil</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ path('app_galerie') }}">Galerie</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ path('app_article') }}">Article</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ path('app_events') }}">Events</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contact">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<section class="py-5">
+		<div class="container">
+			<h1 class="display-4 text-center mb-5">Être Vivant</h1>
+            <p>"Explorez la richesse et la diversité de la vie à travers l'objectif, où chaque image immortalise l'énergie, la beauté et l'harmonie des êtres vivants, qu'ils soient animaux ou plantes, dans leur environnement naturel."</p>	
+			<div class="row">
+				<div class="col-md-4 mb-4">
+					<img src="img/fleur.PNG" class="img-fluid rounded gallery-image" alt="Photo 1" onclick="openModal(this)">
+				</div>
+				<div class="col-md-4 mb-4">
+					<img src="img/fleur1.PNG" class="img-fluid rounded gallery-image" alt="Photo 2" onclick="openModal(this)">
+				</div>
+				<div class="col-md-4 mb-4">
+					<img src="img/fleur2.PNG" class="img-fluid rounded gallery-image" alt="Photo 3" onclick="openModal(this)">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 mb-4">
+					<img src="img/fleur3.PNG" class="img-fluid rounded gallery-image" alt="Photo 4" onclick="openModal(this)">
+				</div>
+				<div class="col-md-4 mb-4">
+					<img src="img/nature.PNG" class="img-fluid rounded gallery-image" alt="Photo 5" onclick="openModal(this)">
+				</div>
+				<div class="col-md-4 mb-4">
+					<img src="img/fleur5.PNG" class="img-fluid rounded gallery-image" alt="Photo 6" onclick="openModal(this)">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 mb-4">
+					<img src="img/fleur6.PNG" class="img-fluid rounded gallery-image" alt="Photo 4" onclick="openModal(this)">
+				</div>
+				<div class="col-md-4 mb-4">
+					<img src="img/fleur7.PNG" class="img-fluid rounded gallery-image" alt="Photo 5" onclick="openModal(this)">
+				</div>
+				<div class="col-md-4 mb-4">
+					<img src="img/fleur4.PNG" class="img-fluid rounded gallery-image" alt="Photo 6" onclick="openModal(this)">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 mb-4">
+					<img src="img/nature1.PNG" class="img-fluid rounded gallery-image" alt="Photo 4" onclick="openModal(this)">
+				</div>
+				<div class="col-md-4 mb-4">
+					<img src="img/nature3.PNG" class="img-fluid rounded gallery-image" alt="Photo 5" onclick="openModal(this)">
+				</div>
+				<div class="col-md-4 mb-4">
+					<img src="img/nature6.PNG" class="img-fluid rounded gallery-image" alt="Photo 6" onclick="openModal(this)">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 mb-4">
+					<img src="img/nature4.PNG" class="img-fluid rounded gallery-image" alt="Photo 4" onclick="openModal(this)">
+				</div>
+				<div class="col-md-4 mb-4">
+					<img src="img/nature5.PNG" class="img-fluid rounded gallery-image" alt="Photo 5" onclick="openModal(this)">
+				</div>
+				<div class="col-md-4 mb-4">
+					<img src="img/nature2.PNG" class="img-fluid rounded gallery-image" alt="Photo 6" onclick="openModal(this)">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 mb-4">
+					<img src="img/nature7.PNG" class="img-fluid rounded gallery-image" alt="Photo 4" onclick="openModal(this)">
+				</div>
+				<div class="col-md-4 mb-4">
+					<img src="img/nature8.PNG" class="img-fluid rounded gallery-image" alt="Photo 5" onclick="openModal(this)">
+				</div>
+				<div class="col-md-4 mb-4">
+					<img src="img/nature9.PNG" class="img-fluid rounded gallery-image" alt="Photo 6" onclick="openModal(this)">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 mb-4">
+					<img src="img/nature10.PNG" class="img-fluid rounded gallery-image" alt="Photo 4" onclick="openModal(this)">
+				</div>
+				<div class="col-md-4 mb-4">
+					<img src="img/nature11.PNG" class="img-fluid rounded gallery-image" alt="Photo 5" onclick="openModal(this)">
+				</div>
+				<div class="col-md-4 mb-4">
+					<img src="img/nature12.PNG" class="img-fluid rounded gallery-image" alt="Photo 6" onclick="openModal(this)">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Modal pour afficher l'image en grand -->
+	<div id="myModal">
+		<span class="close" onclick="closeModal()">&times;</span>
+		<img id="modalImage" src="" alt="Image agrandie">
+	</div>
+
+	<!-- Scripts pour le Modal -->
+	<script>
+		function openModal(image) {
+			var modal = document.getElementById("myModal");
+			var modalImage = document.getElementById("modalImage");
+			modal.style.display = "block";
+			modalImage.src = image.src;
+		}
+
+		function closeModal() {
+			var modal = document.getElementById("myModal");
+			modal.style.display = "none";
+		}
+	</script>
+
+	<!-- Lien vers les scripts Bootstrap -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
+	<!-- Modal pour afficher l'image en grand -->
+	<div id="myModal">
+		<span class="close" onclick="closeModal()">&times;</span>
+		<img id="modalImage" src="" alt="Image agrandie">
+	</div>
+
+	<!-- Pied de page -->
+	<footer class="bg-dark text-white text-center py-4">
+		<p>&copy; 2025 MonSite Photo. Tous droits réservés.</p>
+		<div>
+			<a href="https://instagram.com" target="_blank" class="text-white mx-3">Instagram</a>
+			<a href="https://facebook.com" target="_blank" class="text-white mx-3">Facebook</a>
+		</div>
+	</footer>
+
+	<!-- Lien vers les scripts Bootstrap -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<!-- Script JavaScript pour ouvrir et fermer le modal -->
+	<script>
+		// Fonction pour ouvrir l'image en grand dans un modal
+		function openModal(imgElement) {
+			var modal = document.getElementById("myModal");
+			var modalImg = document.getElementById("modalImage");
+			modal.style.display = "block";
+			modalImg.src = imgElement.src; // Change l'image dans le modal avec celle cliquée
+		}
+
+		// Fonction pour fermer le modal
+		function closeModal() {
+			var modal = document.getElementById("myModal");
+			modal.style.display = "none";
+		}
+
+		// Fermer le modal si l'utilisateur clique en dehors de l'image
+		window.onclick = function(event) {
+			var modal = document.getElementById("myModal");
+			if (event.target == modal) {
+				closeModal();
+			}
+		}
+	</script>
+
+</body>
+</html>

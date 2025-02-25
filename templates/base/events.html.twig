@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nos Événements - MonSite Photo</title>
+	<link
+		rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+	<!-- Lien vers Bootstrap CSS -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Style pour uniformiser la taille des images -->
+	<style>
+		/* Style pour les images */
+		.img-fluid {
+			width: 100%;
+			height: 200px;  /* Fixer une hauteur uniforme pour les images */
+			object-fit: cover;  /* Assurer que les images remplissent leur conteneur */
+			border-radius: 10px;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- En-tête -->
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="#">MonSite Photo</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="{{ path('app_base') }}">Accueil</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ path('app_galerie') }}">Galerie</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ path('app_article') }}">Article</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ path('app_events') }}">Events</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contact">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<!-- Section des événements -->
+	<section class="py-5">
+		<div class="container">
+			<h1 class="display-4 text-center mb-5">David Penez photographe de vos événements</h1>
+
+			<!-- Sous-partie Présentation -->
+			<div class="mb-5">
+				<h2>Présentation</h2>
+				<p>Passionnés de photographie, David Penez choisit de mettre sa passion, son savoir-faire et son expérience professionnelle au service de votre entreprises. Vous recherchez un photographe professionnel qui sera à même de traiter vos besoins. Ne cherchez plus vous l'avez trouvé !</p>
+			</div>
+			
+			<!-- Intégration de la vidéo YouTube -->
+			<iframe width="100%" height="500" src="https://www.youtube.com/embed/TDsBq9fcC78" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br><br>
+
+			<!-- Sous-partie Shooting -->
+			<div class="row mb-5">
+				<div class="col-md-6">
+					<h3>Shooting</h3>
+					<img src="img/shooting2.jpg" class="img-fluid" alt="Shooting">
+				</div>
+				<div class="col-md-6">
+				<p>Venez capturer l'instant magique qui révélera la meilleure version de vous-même ! Prêt à vivre une expérience unique et à immortaliser votre beauté sous les projecteurs ?</p>
+					<a href="{{ path('app_shooting') }}" class="btn btn-primary">En savoir plus</a>
+				</div>
+			</div>
+
+			<!-- Sous-partie Shooting Mariages -->
+			<div class="row mb-5">
+				<div class="col-md-6">
+					<h3>Shooting Mariages-Grossesses</h3>
+					<img src="img/mariage9.jpg" class="img-fluid" alt="Shooting Mariages">
+				</div>
+				<div class="col-md-6">
+					<p>Capturez l'un des moments les plus importants de votre vie avec un shooting photo de mariage personnalisé. Nous nous assurons que chaque moment soit immortalisé dans un cadre magnifique.</p>
+					<a href="{{ path('app_mariage') }}" class="btn btn-primary">En savoir plus</a>
+				</div>
+			</div>
+
+			<!-- Sous-partie Comité d'Entreprise / CSE -->
+			<div class="row mb-5">
+				<div class="col-md-6">
+					<h3>Comité d'Entreprise / CSE</h3>
+					<img src="img/cse1.jpg" class="img-fluid" alt="Shooting Comité d'Entreprise / CSE">
+				</div>
+				<div class="col-md-6">
+					<p>Nous organisons des événements pour les comités d'entreprise (CSE), des séminaires, des galas ou des événements team-building. Nos séances photo vous aident à valoriser vos événements professionnels et à capturer des moments mémorables pour votre équipe.</p>
+					<a href="{{ path('app_cse') }}" class="btn btn-primary">En savoir plus</a>
+				</div>
+			</div>
+
+			<!-- Sous-partie Immobilier -->
+			<div class="row mb-5">
+				<div class="col-md-6">
+					<h3>Shooting Immobilier</h3>
+					<img src="img/immobilier1.jpg" class="img-fluid" alt="Shooting Immobilier">
+				</div>
+				<div class="col-md-6">
+					<p>Que vous soyez un agent immobilier ou un propriétaire cherchant à mettre en valeur votre bien, nous vous proposons des shootings immobiliers professionnels pour faire ressortir tout le potentiel de vos espaces.</p>
+					<a href="{{ path('app_immobilier') }}" class="btn btn-primary">En savoir plus</a>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- Pied de page -->
+	<footer class="bg-dark text-white text-center py-4">
+		<p>&copy; 2025 MonSite Photo. Tous droits réservés.</p>
+		<div>
+			<a href="https://instagram.com" target="_blank" class="text-white mx-3">Instagram</a>
+			<a href="https://facebook.com" target="_blank" class="text-white mx-3">Facebook</a>
+		</div>
+	</footer>
+
+	<!-- Lien vers les scripts Bootstrap -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

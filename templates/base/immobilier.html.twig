@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Immobilier</title>
+		<!-- Lien vers Bootstrap CSS -->
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+		<style>
+
+			#myModal {
+				display: none;
+				position: fixed;
+				z-index: 1;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.8);
+				overflow: auto;
+				text-align: center;
+			}
+
+			#myModal img {
+				max-width: 80%;
+				max-height: 80%;
+				margin-top: 5%;
+			}
+
+
+			.close {
+				position: absolute;
+				top: 15px;
+				right: 25px;
+				color: #fff;
+				font-size: 30px;
+				font-weight: bold;
+				cursor: pointer;
+			}
+
+			.close:hover,
+			.close:focus {
+				color: #bbb;
+				text-decoration: none;
+				cursor: pointer;
+			}
+
+
+			.row {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+
+
+			.col-md-6 {
+				padding: 10px;
+			}
+
+
+			.gallery-image {
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+				border-radius: 10px;
+				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+
+
+			.gallery-image:hover {
+				transform: scale(1.05);
+				box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+			}
+
+
+			.gallery-image:active {
+				transform: scale(1.1);
+			}
+		</style>
+	</head>
+	<body>
+
+		<!-- En-tête -->
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+				<a class="navbar-brand" href="#">MonSite Photo</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="{{ path('app_base') }}">Accueil</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ path('app_galerie') }}">Galerie</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ path('app_article') }}">Article</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ path('app_events') }}">Events</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+
+		<section class="py-5">
+			<div class="container">
+				<h1 class="display-4 text-center mb-5">Immobilier</h1>
+				<p>Séduisez vos clients avec de magnifiques photographies !
+					David Penez mets à votre disposition toutes ces compétences pour réaliser des clichés qui reproduisent parfaitement la qualité des biens que vous proposez à la vente ou en location.</p>
+
+
+				<div class="row">
+					<div class="col-md-6 mb-4">
+						<img src="img/immobilier1.jpg" class="img-fluid rounded gallery-image" alt="Photo 1" onclick="openModal(this)">
+					</div>
+					<div class="col-md-6 mb-4">
+						<img src="img/immobilier2.jpg" class="img-fluid rounded gallery-image" alt="Photo 2" onclick="openModal(this)">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 mb-4">
+						<img src="img/immobilier3.jpg" class="img-fluid rounded gallery-image" alt="Photo 3" onclick="openModal(this)">
+					</div>
+					<div class="col-md-6 mb-4">
+						<img src="img/immobilier4.JPG" class="img-fluid rounded gallery-image" alt="Photo 4" onclick="openModal(this)">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 mb-4">
+						<img src="img/immobilier5.jpg" class="img-fluid rounded gallery-image" alt="Photo 5" onclick="openModal(this)">
+					</div>
+					<div class="col-md-6 mb-4">
+						<img src="img/immobilier6.jpg" class="img-fluid rounded gallery-image" alt="Photo 6" onclick="openModal(this)">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 mb-4">
+						<img src="img/immobilier7.JPG" class="img-fluid rounded gallery-image" alt="Photo 7" onclick="openModal(this)">
+					</div>
+					<div class="col-md-6 mb-4">
+						<img src="img/immobilier8.jpg" class="img-fluid rounded gallery-image" alt="Photo 8" onclick="openModal(this)">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Modal pour afficher l'image en grand -->
+		<div id="myModal">
+			<span class="close" onclick="closeModal()">&times;</span>
+			<img id="modalImage" src="" alt="Image agrandie">
+		</div>
+
+		<!-- Pied de page -->
+		<footer class="bg-dark text-white text-center py-4">
+			<p>&copy; 2025 MonSite Photo. Tous droits réservés.</p>
+			<div>
+				<a href="https://instagram.com" target="_blank" class="text-white mx-3">Instagram</a>
+				<a href="https://facebook.com" target="_blank" class="text-white mx-3">Facebook</a>
+			</div>
+		</footer>
+
+		<!-- Lien vers les scripts Bootstrap -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+		<!-- Script JavaScript pour ouvrir et fermer le modal -->
+		<script>
+			// Fonction pour ouvrir l'image en grand dans un modal
+function openModal(imgElement) {
+var modal = document.getElementById("myModal");
+var modalImg = document.getElementById("modalImage");
+modal.style.display = "block";
+modalImg.src = imgElement.src; // Change l'image dans le modal avec celle cliquée
+}
+
+// Fonction pour fermer le modal
+function closeModal() {
+var modal = document.getElementById("myModal");
+modal.style.display = "none";
+}
+
+// Fermer le modal si l'utilisateur clique en dehors de l'image
+window.onclick = function (event) {
+var modal = document.getElementById("myModal");
+if (event.target == modal) {
+closeModal();
+}
+}
+		</script>
+
+	</body>
+</html>

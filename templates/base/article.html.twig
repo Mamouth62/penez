@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Articles - MonSite Photo</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+    <!-- Lien vers Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- En-tête -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">MonSite Photo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_base') }}">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_galerie') }}">Galerie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_article') }}">Article</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_events') }}">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- Section des articles -->
+<section class="py-5">
+    <div class="container">
+        <h1 class="display-4 text-center mb-5">Nos Articles</h1>
+
+        <!-- Liste des articles -->
+        <div class="row">
+            <!-- Article 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Juge Fédération Française de la photographie</h5>
+                        <p><small class="text-muted">Publié le 9 juillet 2024</small></p>
+                        <a href="{{ path('app_article1') }}" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Exposition Noyant</h5>
+                        <p><small class="text-muted">Publié le 9 juillet 2024</small></p>
+                        <a href="{{ path('app_article2') }}" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Titre de l'Article 3</h5>
+                        <p><small class="text-muted">Publié le 8 janvier 2025</small></p>
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Titre de l'Article 4</h5>
+                        <p><small class="text-muted">Publié le 5 janvier 2025</small></p>
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Titre de l'Article 5</h5>
+                        <p><small class="text-muted">Publié le 2 janvier 2025</small></p>
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Titre de l'Article 6</h5>
+                        <p><small class="text-muted">Publié le 1 janvier 2025</small></p>
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 7 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/article7.jpg" class="card-img-top" alt="Article 7">
+                    <div class="card-body">
+                        <h5 class="card-title">Titre de l'Article 7</h5>
+                        <p class="card-text">Extrait de l'article 7. Un petit résumé de ce que cet article contient...</p>
+                        <p><small class="text-muted">Publié le 30 décembre 2024</small></p>
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 8 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/article8.jpg" class="card-img-top" alt="Article 8">
+                    <div class="card-body">
+                        <h5 class="card-title">Titre de l'Article 8</h5>
+                        <p class="card-text">Extrait de l'article 8. Un petit résumé de ce que cet article contient...</p>
+                        <p><small class="text-muted">Publié le 28 décembre 2024</small></p>
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 9 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/article9.jpg" class="card-img-top" alt="Article 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Titre de l'Article 9</h5>
+                        <p class="card-text">Extrait de l'article 9. Un petit résumé de ce que cet article contient...</p>
+                        <p><small class="text-muted">Publié le 25 décembre 2024</small></p>
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 10 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/article10.jpg" class="card-img-top" alt="Article 10">
+                    <div class="card-body">
+                        <h5 class="card-title">Titre de l'Article 10</h5>
+                        <p class="card-text">Extrait de l'article 10. Un petit résumé de ce que cet article contient...</p>
+                        <p><small class="text-muted">Publié le 22 décembre 2024</small></p>
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 11 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/article11.jpg" class="card-img-top" alt="Article 11">
+                    <div class="card-body">
+                        <h5 class="card-title">Titre de l'Article 11</h5>
+                        <p class="card-text">Extrait de l'article 11. Un petit résumé de ce que cet article contient...</p>
+                        <p><small class="text-muted">Publié le 20 décembre 2024</small></p>
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 12 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/article12.jpg" class="card-img-top" alt="Article 12">
+                    <div class="card-body">
+                        <h5 class="card-title">Titre de l'Article 12</h5>
+                        <p class="card-text">Extrait de l'article 12. Un petit résumé de ce que cet article contient...</p>
+                        <p><small class="text-muted">Publié le 15 décembre 2024</small></p>
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 13 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/article13.jpg" class="card-img-top" alt="Article 13">
+                    <div class="card-body">
+                        <h5 class="card-title">Titre de l'Article 13</h5>
+                        <p class="card-text">Extrait de l'article 13. Un petit résumé de ce que cet article contient...</p>
+                        <p><small class="text-muted">Publié le 10 décembre 2024</small></p>
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 14 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/article14.jpg" class="card-img-top" alt="Article 14">
+                    <div class="card-body">
+                        <h5 class="card-title">Titre de l'Article 14</h5>
+                        <p class="card-text">Extrait de l'article 14. Un petit résumé de ce que cet article contient...</p>
+                        <p><small class="text-muted">Publié le 5 décembre 2024</small></p>
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 15 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/article15.jpg" class="card-img-top" alt="Article 15">
+                    <div class="card-body">
+                        <h5 class="card-title">Titre de l'Article 15</h5>
+                        <p class="card-text">Extrait de l'article 15. Un petit résumé de ce que cet article contient...</p>
+                        <p><small class="text-muted">Publié le 1 décembre 2024</small></p>
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 16 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/article16.jpg" class="card-img-top" alt="Article 16">
+                    <div class="card-body">
+                        <h5 class="card-title">Titre de l'Article 16</h5>
+                        <p class="card-text">Extrait de l'article 16. Un petit résumé de ce que cet article contient...</p>
+                        <p><small class="text-muted">Publié le 28 novembre 2024</small></p>
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 17 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/article17.jpg" class="card-img-top" alt="Article 17">
+                    <div class="card-body">
+                        <h5 class="card-title">Titre de l'Article 17</h5>
+                        <p class="card-text">Extrait de l'article 17. Un petit résumé de ce que cet article contient...</p>
+                        <p><small class="text-muted">Publié le 22 novembre 2024</small></p>
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 18 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/article18.jpg" class="card-img-top" alt="Article 18">
+                    <div class="card-body">
+                        <h5 class="card-title">Titre de l'Article 18</h5>
+                        <p class="card-text">Extrait de l'article 18. Un petit résumé de ce que cet article contient...</p>
+                        <p><small class="text-muted">Publié le 18 novembre 2024</small></p>
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 19 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/article19.jpg" class="card-img-top" alt="Article 19">
+                    <div class="card-body">
+                        <h5 class="card-title">Titre de l'Article 19</h5>
+                        <p class="card-text">Extrait de l'article 19. Un petit résumé de ce que cet article contient...</p>
+                        <p><small class="text-muted">Publié le 12 novembre 2024</small></p>
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 20 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/article20.jpg" class="card-img-top" alt="Article 20">
+                    <div class="card-body">
+                        <h5 class="card-title">Titre de l'Article 20</h5>
+                        <p class="card-text">Extrait de l'article 20. Un petit résumé de ce que cet article contient...</p>
+                        <p><small class="text-muted">Publié le 5 novembre 2024</small></p>
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 21 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/article21.jpg" class="card-img-top" alt="Article 21">
+                    <div class="card-body">
+                        <h5 class="card-title">Titre de l'Article 21</h5>
+                        <p class="card-text">Extrait de l'article 21. Un petit résumé de ce que cet article contient...</p>
+                        <p><small class="text-muted">Publié le 1 novembre 2024</small></p>
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 22 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/article22.jpg" class="card-img-top" alt="Article 22">
+                    <div class="card-body">
+                        <h5 class="card-title">Titre de l'Article 22</h5>
+                        <p class="card-text">Extrait de l'article 22. Un petit résumé de ce que cet article contient...</p>
+                        <p><small class="text-muted">Publié le 25 octobre 2024</small></p>
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 23 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/article23.jpg" class="card-img-top" alt="Article 23">
+                    <div class="card-body">
+                        <h5 class="card-title">Titre de l'Article 23</h5>
+                        <p class="card-text">Extrait de l'article 23. Un petit résumé de ce que cet article contient...</p>
+                        <p><small class="text-muted">Publié le 15 octobre 2024</small></p>
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 24 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/article24.jpg" class="card-img-top" alt="Article 24">
+                    <div class="card-body">
+                        <h5 class="card-title">Titre de l'Article 24</h5>
+                        <p class="card-text">Extrait de l'article 24. Un petit résumé de ce que cet article contient...</p>
+                        <p><small class="text-muted">Publié le 10 octobre 2024</small></p>
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pied de page -->
+<footer class="bg-dark text-white text-center py-4">
+    <p>&copy; 2025 MonSite Photo. Tous droits réservés.</p>
+    <div>
+        <a href="https://instagram.com" target="_blank" class="text-white mx-3">Instagram</a>
+        <a href="https://facebook.com" target="_blank" class="text-white mx-3">Facebook</a>
+    </div>
+</footer>
+
+<!-- Lien vers les scripts Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+

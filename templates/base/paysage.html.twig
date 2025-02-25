@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photographe - Capturer vos moments</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+    <!-- Lien vers Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .album-card {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .album-card:hover {
+            transform: scale(1.05);
+        }
+        .album-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">David Penez</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_base') }}">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_galerie') }}">Galerie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_article') }}">Article</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_events') }}">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- Section Galerie -->
+<section id="galerie" class="gallery py-5">
+    <div class="container text-center">
+        <h2>Paysage - Albums</h2>
+        <p class="lead">Explorez mes différents albums !</p>
+        <div class="row">
+            <!-- Album 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card album-card" onclick="window.location.href='{{ path('app_arras') }}'">
+                    <img src="img/beffroi.PNG" class="card-img-top album-image" alt="Album 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Arras</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Album 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card album-card" onclick="window.location.href='{{ path('app_nature') }}'">
+                    <img src="img/nature.PNG" class="card-img-top album-image" alt="Album 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Être Vivant</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Album 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card album-card" onclick="window.location.href='{{ path('app_b&w') }}'">
+                    <img src="img/ombre6.PNG" class="card-img-top album-image" alt="Album 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Noir et Blanc</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Album 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card album-card" onclick="window.location.href='album4.html'">
+                    <img src="img/paysage7.PNG" class="card-img-top album-image" alt="Album 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Paysage</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Pied de page -->
+<footer class="bg-dark text-white text-center py-4">
+    <p>&copy; 2025 David Penez+9999:gcqgfcsffffgtr Photo. Tous droits réservés.</p>
+    <div>
+        <a href="https://www.instagram.com/david_penez/" target="_blank" class="text-white mx-3">Instagram</a>
+        <a href="https://facebook.com" target="_blank" class="text-white mx-3">Facebook</a>
+    </div>
+</footer>
+
+<!-- Lien vers les scripts Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
